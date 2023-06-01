@@ -1,24 +1,18 @@
-def reverse_integer(num):
-    # Check if the number is negative
-    is_negative = False
-    if num < 0:
-        is_negative = True
-        num = abs(num)
-
-    # Convert the number to a string and reverse it
-    num_str = str(num)
-    reversed_str = num_str[::-1]
-
-    # Convert the reversed string back to an integer
-    reversed_num = int(reversed_str)
-
-    # Restore the sign if the number was originally negative
-    if is_negative:
-        reversed_num *= -1
-
-    return reversed_num
-
-# Example usage
-number = int(input())
-reversed_number = reverse_integer(number)
-print(f"{reversed_number}")
+def reverse(n):
+    negative=False
+    if n<0:
+        negative=True
+        n=abs(n)
+    rev=0
+    while n>0:
+        r=n%10
+        rev=(rev*10)+r
+        n=n//10
+        
+    if negative:
+        rev=-rev
+    return rev
+    
+n=int(input())
+rev=reverse(n)
+print(rev)
