@@ -1,14 +1,13 @@
-def is_automorphic_number(num):
-    square = num ** 2
-    num_str = str(num)
-    square_str = str(square)
-    if square_str.endswith(num_str):
+def automorphic(n):
+    s=n*n
+    sn=str(n)
+    ss=str(s)
+    if ss.endswith(sn):
         return True
     return False
-
-# Example usage
-number = int(input())
-if is_automorphic_number(number):
+    
+num=int(input())
+if automorphic(num):
     print("Automorphic Number")
-else:
+else :
     print("Not an Automorphic Number")
